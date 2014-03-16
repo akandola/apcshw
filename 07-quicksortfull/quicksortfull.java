@@ -36,6 +36,7 @@ public class quicksortfull {
 	System.out.println(test);
 	System.out.println(quicksort(test));
     }
-}
+
+    
 
 // I have absolutely no idea why it says that it reaches the endo f hte file while parsing. Everything is closed. I can't even test it because of that. So confused. Spent most of my time trying to fix the error.
