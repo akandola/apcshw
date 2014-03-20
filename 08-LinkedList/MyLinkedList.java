@@ -73,7 +73,7 @@ public class MyLinkedList {
 	Node tmp = head;
 	while (tmp != null) {
 	    count++;
-	    if (count == (i)) {
+	    if (count == (i-1)) {
 		ans = tmp.getNext().getData(); //to return this value
 		tmp.setNext(tmp.getNext().getNext()); //skip over the .getNext() or the next value, desired to remove value
 	    }
