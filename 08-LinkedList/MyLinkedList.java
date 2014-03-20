@@ -82,6 +82,19 @@ public class MyLinkedList {
 	return ans;
     }
 
+    /*
+    public String remove2(int n) {
+    i =0;
+    tmp = head.getNext();
+    t2 = head;
+    while(i<n) {
+    t2 = tmp;
+    i = i+1;
+    }
+   COMMENT: tmp is at endpoint
+   COMMENT: t2 is 1 before endpoint
+    t2.setNext(tmp.getNext());
+    */
     public int find(String s) {
 	int count = -1;
 	Node tmp = head;
