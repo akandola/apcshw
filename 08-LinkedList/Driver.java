@@ -31,5 +31,13 @@ public class Driver {
 	System.out.println(n1.getNext());
 	System.out.println(n1.getNext().getNext());
 	System.out.println(n1.getNext().getNext().getNext());
+
+	//test add(int,string)
+	//n1.add(1,"Bob");
+	//System.out.println(n1.getNext().getNext().getNext().getNext());
+
+	System.out.println("Test get(int i)");
+	n1.get(2);
+
     }
 }

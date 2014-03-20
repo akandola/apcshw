@@ -30,7 +30,7 @@ public class MyLinkedList {
 	Node tmp = head;
 	while (tmp != null) {
 	    count++;
-	    if (count == i) {
+	    if (count == (i-1)) {
 		Node x = new Node(s);
 		x.setNext(tmp.getNext()); //connect Node x to end loop
 		tmp.setNext(x); //connect beginning loop to x, already connected to end loop
@@ -39,11 +39,11 @@ public class MyLinkedList {
     }
 
     public String get(int i) {
-	int count = -1;
+	int count = 0;
 	Node tmp = head;
 	while(tmp != null) {
 	    count++;
-	    if (count == i) {
+	    if (count == (i-1)) {
 		return tmp.getData();
 	    }
 	    tmp = tmp.getNext();
@@ -95,7 +95,7 @@ public class MyLinkedList {
 	return -1;
     }
 
-    public int length() {
+    public int size() {
 	int ans = 0;
 	Node tmp = head;
 	while (tmp != null) {
