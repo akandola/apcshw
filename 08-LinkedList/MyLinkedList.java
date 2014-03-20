@@ -83,7 +83,7 @@ public class MyLinkedList {
     }
 
     public int find(String s) {
-	int count = -1;
+	int count = 0;
 	Node tmp = head;
 	    while (tmp != null) {
 		count++;
