@@ -91,9 +91,9 @@ public class MyLinkedList {
     t2 = tmp;
     i = i+1;
     }
-   COMMENT: tmp is at endpoint
-   COMMENT: t2 is 1 before endpoint
-    t2.setNext(tmp.getNext());
+  // tmp is at endpoint
+  // t2 is 1 before endpoint
+    t2.setNext(tmp.getNext()); //t2.setNext(t2.getNext().getNext());
     */
     public int find(String s) {
 	int count = -1;
