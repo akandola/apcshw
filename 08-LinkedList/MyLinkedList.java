@@ -39,7 +39,7 @@ public class MyLinkedList {
     }
 
     public String get(int i) {
-	int count = 0;
+	int count = -1;
 	Node tmp = head;
 	while(tmp != null) {
 	    count++;
@@ -52,11 +52,11 @@ public class MyLinkedList {
     }
 
     public String set(int i, String s) {
-	int count = 0;
+	int count = -1;
 	String answer = "";
 	Node tmp = head;
 	    while (tmp != null) {
-		if (count == i) {
+		if (count == (i-1)) {
 		    answer = tmp.getNext().getData();
 		    Node x = new Node(s);
 		    x.setNext(tmp.getNext().getNext());//connect to end loop
@@ -68,7 +68,7 @@ public class MyLinkedList {
     }
 
     public String remove(int i) {
-	int count = 0;
+	int count = -1;
 	String ans = "";
 	Node tmp = head;
 	while (tmp != null) {
@@ -83,7 +83,7 @@ public class MyLinkedList {
     }
 
     public int find(String s) {
-	int count = 0;
+	int count = -1;
 	Node tmp = head;
 	    while (tmp != null) {
 		count++;
