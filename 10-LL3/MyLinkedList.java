@@ -2,9 +2,11 @@
 public class MyLinkedList {
     
     private Node head;
+    private Node tail;
     
     public MyLinkedList() {
 	head = new Node("arbitrary");
+	tail = null;
     }
     /*    
     public void add(String d) {
@@ -15,14 +17,14 @@ public class MyLinkedList {
 	head.setNext(tmp);
     }
     */
-
+    // The tail node is linked to the last node 
     public void add (String d) {
-	Node tmp = new Node(d);
+	Node tail = new Node(d);
 	Node tmp2 = head.getNext();
 	while (tmp2 != null) {
 	    tmp2 = tmp2.getNext();
 	}
-	tmp2.setNext(tmp);
+	tmp2.setNext(tail);
     }
 
 	
