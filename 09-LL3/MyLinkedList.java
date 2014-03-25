@@ -3,10 +3,11 @@ public class MyLinkedList {
     
     private Node head;
     private Node tail;
-    
+    private int length;
     public MyLinkedList() {
 	head = new Node("arbitrary");
-	tail = null;
+	length = 0;
+	tail = head;
     }
     /*    
     public void add(String d) {
@@ -19,12 +20,9 @@ public class MyLinkedList {
     */
     // The tail node is linked to the last node 
     public void add (String d) {
-	Node tail = new Node(d);
-	Node tmp2 = head.getNext();
-	while (tmp2 != null) {
-	    tmp2 = tmp2.getNext();
-	}
-	tmp2.setNext(tail);
+	Node tmp = new Node(d);
+	tmp.setNext(tail.getNext());//the end
+	tail.setNext(tmp); 
     }
 
 	
@@ -38,21 +36,9 @@ public class MyLinkedList {
 	return s;
     }
 
-    public void add (int i, String s) {
-	int count = 0;
-	Node tmp1 = head.getNext();
-	Node tmp2 = tmp1.getNext();
-	Node node1 = new Node(s);
-	while (count<i-1) {
-	    tmp1=tmp1.getNext();
-	    tmp2=tmp2.getNext();
-	}
-	node1.setNext(tmp2);
-	tmp1.setNext(node1);
-    }
 
     public String get(int i) {
-	Node tmp = head.getNext();
+	Node tmp = head;
 	int count = 0;
 	while(count<i) {
 	    count++;
@@ -60,6 +46,7 @@ public class MyLinkedList {
 	}
 	return tmp.getData();
     }
+   
     
 
     public String set(int i, String s) {
@@ -72,7 +59,6 @@ public class MyLinkedList {
 	}
 	tmp.setData(s);
 	return tmp.getData();
-       	
     }
 
     public String remove(int i) {
