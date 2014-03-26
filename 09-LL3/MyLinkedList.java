@@ -1,12 +1,10 @@
 
-public class MyLinkedList {
+public class MyLinkedList<E> {
     
-    private Node head;
-    private Node tail;
-    private int length;
+    private Node<E> head;
+    private Node<E> tail;
     public MyLinkedList() {
 	head = new Node("arbitrary");
-	length = 0;
 	tail = head;
     }
     /*    
@@ -19,8 +17,8 @@ public class MyLinkedList {
     }
     */
     // The tail node is linked to the last node 
-    public void add (String d) {
-	Node tmp = new Node(d);
+    public void add (E d) {
+	Node<E> tmp = new Node<E>(d);
 	tmp.setNext(tail.getNext());//the end
 	tail.setNext(tmp); 
     }
@@ -28,7 +26,7 @@ public class MyLinkedList {
 	
     public String toString() {
 	String s = "";
-	Node tmp = head.getNext();
+	Node<E> tmp = head.getNext();
 	while (tmp != null) {
 	    s += tmp + ", ";
 	    tmp = tmp.getNext();
@@ -37,8 +35,8 @@ public class MyLinkedList {
     }
 
 
-    public String get(int i) {
-	Node tmp = head;
+    public E get(int i) {
+	Node<E> tmp = head;
 	int count = 0;
 	while(count<i) {
 	    count++;
@@ -49,10 +47,10 @@ public class MyLinkedList {
    
     
 
-    public String set(int i, String s) {
+    public E set(int i, E s) {
 	int count = 0;
 	String answer = "";
-	Node tmp = head.getNext();
+	Node<E> tmp = head.getNext();
 	while(count<i) {
 	    count++;
 	    tmp=tmp.getNext();
@@ -61,17 +59,16 @@ public class MyLinkedList {
 	return tmp.getData();
     }
 
-    public String remove(int i) {
+    public E remove(int i) {
 	int count = 0;
-	String ans = "";
-	Node tmp1 = head.getNext();
-	Node tmp2 = tmp1.getNext();
+      	Node<E> tmp1 = head.getNext();
+	Node<E> tmp2 = tmp1.getNext();
 	while (count<i-1) {
 	    count++;
 	    tmp1 = tmp1.getNext();
 	    tmp2 = tmp2.getNext();
 	}
-	ans = tmp2.getData();
+	E ans = tmp2.getData();
 	tmp1.setNext(tmp2.getNext());
 	return ans;
     }
@@ -91,7 +88,7 @@ public class MyLinkedList {
     */
     public int find(String s) {
 	int count = 0;
-	Node tmp = head.getNext();
+	Node<E> tmp = head.getNext();
 	while (tmp != null) {
 	    count++;
 	    if (tmp.getData().equals(s)) { //compare the getData (string) with your string)
@@ -104,7 +101,7 @@ public class MyLinkedList {
     
     public int size() {
 	int ans = 0;
-	Node tmp = head.getNext();
+	Node<E> tmp = head.getNext();
 	while (tmp != null) {
 	    ans++;
 	    tmp = tmp.getNext(); //will eventually be null
