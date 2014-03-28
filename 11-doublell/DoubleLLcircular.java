@@ -125,6 +125,6 @@ public class DoubleLLcircular<E> {
 	L.forward();
 	L.insert("inserted");
 	System.out.println(L);
-	
+
     }
 }

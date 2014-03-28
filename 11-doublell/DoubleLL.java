@@ -46,7 +46,7 @@ public class DoubleLL<E> {
 		current.getPrev().setNext(current);
 	    }
 	}
-	
+
     }
 
     public E getCurrent() {
@@ -96,6 +96,6 @@ public class DoubleLL<E> {
 	L.forward();
 	L.insert("inserted");
 	System.out.println(L);
-	
+
     }
 }
