@@ -102,7 +102,8 @@ public class rpn {
 	rpn s = new rpn();
 	s.push("4");
 	s.push("2");
-	s.calc("-");
+	s.calc("sin");
+	System.out.println("The sin, cos, and tan functions assume the input is in radians.");
 	System.out.println(s);
     }
 }
