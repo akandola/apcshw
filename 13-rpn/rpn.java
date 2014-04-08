@@ -77,6 +77,21 @@ public class rpn {
 	    this.push("" + ans);
 
 	}
+	else if (s.equals("sin")) {
+	    double temp = Double.parseDouble(this.pop());
+	    double ans = Math.sin(temp);
+	    this.push("" + ans);
+	}
+	else if (s.equals("cos")) {
+	    double temp = Double.parseDouble(this.pop());
+	    double ans = Math.cos(temp);
+	    this.push("" + ans);
+	}
+	else if (s.equals("tan")) {
+	    double temp = Double.parseDouble(this.pop());
+	    double ans = Math.tan(temp);
+	    this.push("" + ans);
+	}
 	else{
 	    this.push(s);
 	}
