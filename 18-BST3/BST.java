@@ -99,11 +99,12 @@ public class BST {
        if (n==null) {
        return;
        } else {
-       pop.(n.getData());
+       system.out.println(n.getData());
        traverse(n.getLeft());
        traverse(n.getRight());
        }
        }
+if you switch the print line with the first traverse, it prints all the left then all the right 
     */
 	
 }
