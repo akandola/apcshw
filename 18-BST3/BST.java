@@ -80,6 +80,23 @@ public class BST {
 	else {
 	}
     }
+
+    public void traverse (Node n) {
+	if (n.getLeft() != null) {
+	    traverse(n.getLeft());
+	}
+	else {
+	    System.out.println(n.getLeft().getData());
+	}
+	if (n.getRight() != null) {
+	    traverse(n.getRight());
+	}
+	else {
+	    System.out.println(n.getRight().getData());
+	}
+    }
+    
+    
 }
 
 
