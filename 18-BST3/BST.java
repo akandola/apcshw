@@ -95,7 +95,16 @@ public class BST {
 	    System.out.println(n.getRight().getData());
 	}
     }
-    
+    /* public void traverse (node n) {
+       if (n==null) {
+       return;
+       } else {
+       pop.(n.getData());
+       traverse(n.getLeft());
+       traverse(n.getRight());
+       }
+       }
+    */
 	
 }
 
