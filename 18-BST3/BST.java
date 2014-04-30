@@ -105,8 +105,10 @@ public class BST {
        }
        }
 if you switch the print line with the first traverse, it prints all the left then all the right 
+    in order traveral: traverse (left), process node, traverse (right)
+    pre order traversal: process, t(left), t(right)
+    post order traversal: t(left), t(right), process
     */
-	
 }
 
 
