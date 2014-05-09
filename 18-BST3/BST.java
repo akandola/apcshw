@@ -80,6 +80,35 @@ public class BST {
 	else {
 	}
     }
+
+    public void traverse (Node n) {
+	if (n.getLeft() != null) {
+	    traverse(n.getLeft());
+	}
+	else {
+	    System.out.println(n.getLeft().getData());
+	}
+	if (n.getRight() != null) {
+	    traverse(n.getRight());
+	}
+	else {
+	    System.out.println(n.getRight().getData());
+	}
+    }
+    /* public void traverse (node n) {
+       if (n==null) {
+       return;
+       } else {
+       system.out.println(n.getData());
+       traverse(n.getLeft());
+       traverse(n.getRight());
+       }
+       }
+if you switch the print line with the first traverse, it prints all the left then all the right 
+    in order traveral: traverse (left), process node, traverse (right)
+    pre order traversal: process, t(left), t(right)
+    post order traversal: t(left), t(right), process
+    */
 }
 
 
