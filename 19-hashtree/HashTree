@@ -1,0 +1,16 @@
+Difference between:
+	1) HashMap and HashSet:
+A hashmap is assigning a value to a key and putting it into a list. You can repeat values, and it can be unsynchronized. It allows null for both key and value. 
+A hashset doesn't allow duplicate values, and provides an add method, and a contain method to see if the value is already in the hashset. It maintains a unique list. The hashmap as keyed access to each value, whereas the set is an unordered collection.
+
+
+	2) TreeMap and TreeSet
+They are both sorted collections, but htey implement different interfaces (Map vs. Set, respectively). TreeSet only stores obe object but TreeMap, similar to HashMap, stores 2 objects (a key and value, where the key accesses the value). TreeSet doens't allow duplicate objects but you can have duplicate values in TreeMap (probably because keys can differentiate). 
+
+
+How a HashMap is implemented:
+How a TreeMap is implemented:
+Speed Comparison of HashMaps and TreeMaps and Observations:
+Java's built in Heap data structure but not named heap is:
+
+
